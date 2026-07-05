@@ -12,21 +12,33 @@
         body {
             font-family: 'Inter', sans-serif;
         }
+
+        @keyframes spin-color {
+            0% { transform: rotate(0deg); color: #06b6d4; }   /* Cyan */
+            25% { transform: rotate(90deg); color: #a855f7; }  /* Purple */
+            50% { transform: rotate(180deg); color: #ec4899; }  /* Pink */
+            75% { transform: rotate(270deg); color: #eab308; }  /* Yellow */
+            100% { transform: rotate(360deg); color: #06b6d4; } /* Back to Cyan */
+        }
+        
+        .animate-spin-color {
+            animation: spin-color 2s linear infinite;
+            display: inline-block;
+        }
     </style>
 </head>
 
-<body class="bg-black text-white-800 h-screen flex flex-col items-center justify-center p-4">
+<body class="bg-gray-950 text-gray-200 h-screen flex flex-col items-center justify-center p-4">
     
     <div class="text-center">
-        <svg class="w-16 h-16 mx-auto mb-6 text-white-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
-        </svg>
+        
+        <div class="animate-spin-color text-5xl font-mono mb-6 font-bold">/</div>
 
         <h1 class="text-4xl md:text-5xl font-semibold tracking-tight mb-4">Nathaniel Ruprecht</h1>
-        <p class="text-xl text-white-500 uppercase tracking-widest font-medium">Work in Progress</p>
+        <p class="text-xl text-gray-400 uppercase tracking-widest font-medium">Work in Progress</p>
         
-        <div class="mt-10 border-t border-white-200 pt-6">
-            <p class="text-sm text-white-400">Homelab Projects & Resume coming soon.</p>
+        <div class="mt-10 border-t border-gray-800 pt-6">
+            <p class="text-sm text-gray-500">Homelab Projects & Resume coming soon.</p>
         </div>
     </div>
 
