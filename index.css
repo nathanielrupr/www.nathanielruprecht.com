@@ -1,5 +1,5 @@
 
-/* Theme Variables */
+/* variables */
 :root {
     --bg-color: #1E2328;
     --card-bg: #2A3037;
@@ -36,7 +36,7 @@
     border: 0 !important;
     pointer-events: none !important;
 }
-/* Base Reset */
+/* reset */
 *, *::before, *::after {
     box-sizing: border-box;
     margin: 0;
@@ -121,7 +121,7 @@ button {
     background-color: var(--accent-color);
     border-radius: 2px;
 }
-/* Header Navigation */
+/* header */
 .header-wrapper {
     position: fixed;
     top: 0;
@@ -220,13 +220,13 @@ button {
     border-radius: 2px;
     transition: var(--transition-smooth);
 }
-/* Hero Section */
+/* hero */
 #top {
     position: relative;
     padding-top: var(--header-height);
     overflow: hidden;
 }
-/* Animated Background Orbs */
+/* background orbs */
 .bg-orb {
     position: absolute;
     border-radius: 50%;
@@ -310,7 +310,7 @@ button {
     color: #fff;
     transform: translateY(-2px);
 }
-/* Experience Timeline */
+/* timeline */
 .timeline {
     position: relative;
     max-width: 800px;
@@ -695,7 +695,7 @@ details[open] .timeline-details {
         grid-template-columns: 1fr;
     }
 }
-/* Project Cards */
+/* homelab cards */
 .homelab-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -909,7 +909,7 @@ textarea.form-control {
     resize: vertical;
     min-height: 120px;
 }
-/* Footer */
+/* footer */
 #bottom {
     background-color: #171B1F;
     padding: 2.5rem 0;
@@ -1026,7 +1026,7 @@ textarea.form-control {
     }
 }
 @media (max-width: 768px) {
-    /* Theme Variables */
+    /* variables */
 :root {
         --header-height: 70px;
         --header-shrink-height: 60px;

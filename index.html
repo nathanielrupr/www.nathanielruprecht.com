@@ -8,8 +8,7 @@
     <meta name="keywords" content="Nathaniel Ruprecht, DevOps, Homelab, Systems Engineer, Portfolio, Proxmox">
     <meta name="author" content="Nathaniel Ruprecht">
     <meta name="theme-color" content="#1E2328">
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-family='system-ui, sans-serif' font-size='26' font-weight='900' fill='%23D95C14'>/</text></svg>">
-    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+        <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-family='system-ui, sans-serif' font-size='26' font-weight='900' fill='%23D95C14'>/</text></svg>">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Nathaniel Ruprecht | Portfolio & Homelab">
     <meta property="og:description" content="Professional portfolio, work experience, homelab projects, and contact info.">
@@ -19,10 +18,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="index.css?v=37">
+    <link rel="stylesheet" href="index.css?v=38">
 </head>
 <body>
-    <!-- Header Navigation -->
+        <!-- header -->
     <header class="header-wrapper" id="main-header">
         <div class="container header-container">
             <a href="#top" class="logo" id="header-logo" aria-label="Nathaniel Ruprecht Logo">
@@ -44,9 +43,9 @@
         </div>
     </header>
     <main>
-        <!-- Hero Section -->
+                <!-- hero section -->
         <section id="top" class="section">
-            <!-- Animated background orbs -->
+                        <!-- background orbs -->
             <div class="bg-orb orb-accent" style="top: 20%; right: 10%; width: 350px; height: 350px; animation: float-orb-1 25s ease-in-out infinite;"></div>
             <div class="bg-orb orb-teal" style="bottom: 10%; left: -5%; width: 350px; height: 350px; animation: float-orb-2 28s ease-in-out infinite;"></div>
             <div class="bg-orb orb-accent" style="top: 60%; left: 15%; width: 220px; height: 220px; animation: float-orb-1 26s ease-in-out infinite;"></div>
@@ -65,7 +64,7 @@
             </div>
         </section>
         <hr class="section-separator">
-        <!-- Work Experience -->
+                <!-- work experience -->
         <section id="experience" class="section">
             <div class="bg-orb orb-accent" style="top: -10%; left: -10%; width: 400px; height: 400px; animation: float-orb-2 30s ease-in-out infinite;"></div>
             <div class="bg-orb orb-teal" style="bottom: -10%; right: -10%; width: 400px; height: 400px; animation: float-orb-1 32s ease-in-out infinite;"></div>
@@ -251,7 +250,7 @@
             </div>
         </section>
         <hr class="section-separator">
-        <!-- Education -->
+                <!-- education -->
         <section id="education" class="section">
             <div class="bg-orb orb-accent" style="top: 40%; left: 45%; width: 350px; height: 350px; animation: float-orb-1 28s ease-in-out infinite reverse;"></div>
             <div class="bg-orb orb-teal" style="bottom: 10%; right: 5%; width: 260px; height: 260px; animation: float-orb-2 34s ease-in-out infinite;"></div>
@@ -340,7 +339,7 @@
             </div>
         </section>
         <hr class="section-separator">
-        <!-- Homelab Portfolio -->
+                <!-- homelab -->
         <section id="homelab" class="section">
             <div class="bg-orb orb-teal" style="top: -10%; right: -15%; width: 450px; height: 450px; animation: float-orb-1 27s ease-in-out infinite;"></div>
             <div class="bg-orb orb-accent" style="bottom: -15%; left: -10%; width: 400px; height: 400px; animation: float-orb-2 29s ease-in-out infinite;"></div>
@@ -352,8 +351,7 @@
                 <div class="homelab-layout">
                     <div class="hardware-container" id="homelab-hardware">
                         <div class="rack-diagram">
-                            <!-- CSS Grid Server Rack Diagram -->
-                        <div class="server-rack">
+                                                    <div class="server-rack">
                                 <div class="rack-ruler">
                                     <div class="ruler-u">25</div><div class="ruler-u">24</div><div class="ruler-u">23</div>
                                     <div class="ruler-u">22</div><div class="ruler-u">21</div><div class="ruler-u">20</div>
@@ -466,7 +464,7 @@
             </div>
         </section>
         <hr class="section-separator">
-        <!-- Contact Form -->
+                <!-- contact -->
         <section id="contact" class="section">
             <div class="bg-orb orb-accent" style="top: 15%; right: -10%; width: 400px; height: 400px; animation: float-orb-2 26s ease-in-out infinite;"></div>
             <div class="bg-orb orb-teal" style="bottom: -10%; left: -15%; width: 450px; height: 450px; animation: float-orb-1 31s ease-in-out infinite;"></div>
@@ -521,7 +519,7 @@
                             <label for="form-message" class="form-label">Message</label>
                             <textarea name="message" id="form-message" class="form-control" placeholder="Your message here..." required></textarea>
                         </div>
-                        <!-- Hidden honeypot to catch spam bots -->
+                                                <!-- honeypot field to trap bots -->
                         <input type="checkbox" name="botcheck" class="visually-hidden" tabindex="-1" aria-hidden="true">
                         <button type="submit" class="btn btn-primary" style="width: 100%;" id="form-submit-btn">Send Message</button>
                     </form>
@@ -530,7 +528,7 @@
         </section>
         <hr class="section-separator">
     </main>
-    <!-- Footer -->
+        <!-- footer -->
     <footer id="bottom">
         <div class="container footer-content">
             <div class="footer-logo">
@@ -617,63 +615,88 @@
                     }
                 });
             }, observerOptions);
-            sections.forEach(section => observer.observe(section));
-            const contactForm = document.getElementById('contact-form');
-            if (contactForm) {
-                contactForm.addEventListener('submit', async (e) => {
-                    e.preventDefault(); 
-                    const submitBtn = document.getElementById('form-submit-btn');
-                    if (submitBtn) {
-                        submitBtn.textContent = 'Sending...';
-                        submitBtn.disabled = true;
-                    }
-                    const formData = new FormData(contactForm);
-                    try {
-                        const response = await fetch(contactForm.action, {
-                            method: 'POST',
-                            body: formData,
-                            headers: {
-                                'Accept': 'application/json'
-                            }
-                        });
-                        if (response.ok) {
-                            if (submitBtn) {
-                                submitBtn.textContent = 'Message Sent!';
-                                submitBtn.style.backgroundColor = '#2e7d32'; 
-                            }
-                            contactForm.reset();
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+            const scrollWidget = document.getElementById('scroll-widget');
+            const topBtn = document.getElementById('scroll-widget-top-btn');
+            const bottomBtn = document.getElementById('scroll-widget-bottom-btn');
+            const toggleScrollWidget = () => {
+                if (window.scrollY > 300) {
+                    scrollWidget.classList.add('visible');
+                } else {
+                    scrollWidget.classList.remove('visible');
+                }
+            };
+            window.addEventListener('scroll', toggleScrollWidget, { passive: true });
+            toggleScrollWidget(); 
+            topBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+            bottomBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                window.scrollTo({
+                    top: document.body.scrollHeight,
+                    behavior: 'smooth'
+                });
+            });
+            const form = document.getElementById('contact-form');
+            if (form) {
+                const submitBtn = document.getElementById('form-submit-btn');
+                const formStatus = document.getElementById('form-status');
+                form.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    const formData = new FormData(form);
+                    const object = Object.fromEntries(formData);
+                    const json = JSON.stringify(object);
+                    submitBtn.textContent = 'Sending...';
+                    submitBtn.disabled = true;
+                    fetch('https://api.web3forms.com/submit', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'Accept': 'application/json'
+                        },
+                        body: json
+                    })
+                    .then(async (response) => {
+                        const json = await response.json();
+                        if (response.status == 200) {
+                            formStatus.textContent = "Message sent successfully!";
+                            formStatus.className = "form-status success";
+                            form.reset();
                         } else {
-                            if (submitBtn) {
-                                submitBtn.textContent = 'Error Sending';
-                                submitBtn.style.backgroundColor = '#d32f2f'; 
-                            }
+                            console.log(response);
+                            formStatus.textContent = json.message || "Something went wrong!";
+                            formStatus.className = "form-status error";
                         }
-                    } catch (error) {
-                        if (submitBtn) {
-                            submitBtn.textContent = 'Error Sending';
-                            submitBtn.style.backgroundColor = '#d32f2f';
-                        }
-                    }
-                    setTimeout(() => {
-                        if (submitBtn) {
-                            submitBtn.textContent = 'Send Message';
-                            submitBtn.style.backgroundColor = '';
-                            submitBtn.disabled = false;
-                        }
-                    }, 3000);
+                    })
+                    .catch(error => {
+                        console.log(error);
+                        formStatus.textContent = "Something went wrong! Please try again.";
+                        formStatus.className = "form-status error";
+                    })
+                    .finally(() => {
+                        formStatus.style.display = "block";
+                        submitBtn.textContent = 'Send Message';
+                        submitBtn.disabled = false;
+                        setTimeout(() => {
+                            formStatus.style.display = "none";
+                        }, 5000);
+                    });
                 });
             }
-            const typingFields = [
-                { id: 'form-name', prefix: '> ', phrases: ['Nathaniel Ruprecht', 'Linus Torvalds', 'root', '404_Name_Not_Found', 'Sudo Admin'] },
-                { id: 'form-email', prefix: '> ', phrases: ['root@localhost', 'linus@kernel.org', 'bobby@xkcd.com', 'dev-null@blackhole.net', 'sudo-make-me-a-sandwich@xkcd.com', '127.0.0.1@localhost'] },
-                { id: 'form-message', prefix: '> ', phrases: [
-                    'sudo rm -rf / --no-preserve-root',
-                    'dd if=/dev/zero of=/dev/sda',
-                    ':(){ :|:& };:'
-                ] }
-            ];
             function startPlaceholderTyping() {
-                typingFields.forEach(field => {
+                const inputs = [
+                    { id: 'form-name', prefix: '', phrases: ['Your Name', 'Jane Doe', 'John Smith'] },
+                    { id: 'form-email', prefix: '', phrases: ['your.email@example.com', 'hello@domain.com'] },
+                    { id: 'form-message', prefix: '', phrases: ['Your message here...', 'Id love to collaborate!', 'Can you help with my homelab?'] }
+                ];
+                inputs.forEach(field => {
                     const input = document.getElementById(field.id);
                     if (!input) return;
                     let phraseIndex = 0;
@@ -711,6 +734,45 @@
             }
             startPlaceholderTyping();
         });
+        // Animated Favicon (Spinning orange/blue slash)
+        (function() {
+            const link = document.createElement('link');
+            link.rel = 'icon';
+            document.head.appendChild(link);
+            const canvas = document.createElement('canvas');
+            canvas.width = 32;
+            canvas.height = 32;
+            const ctx = canvas.getContext('2d');
+            let t = 0;
+            let timeoutId;
+            function drawFavicon() {
+                if (document.hidden) return;
+                ctx.clearRect(0, 0, 32, 32);
+                t += 0.1;
+                const factor = (Math.sin(t) + 1) / 2; 
+                const r = Math.round(217 + factor * (0 - 217));
+                const g = Math.round(92 + factor * (120 - 92));
+                const b = Math.round(20 + factor * (215 - 20));
+                ctx.save();
+                ctx.translate(16, 16);
+                ctx.rotate(t * 1.5);
+                ctx.font = '900 26px "Inter", sans-serif';
+                ctx.textAlign = 'center';
+                ctx.textBaseline = 'middle';
+                ctx.fillStyle = `rgb(${r}, ${g}, ${b})`;
+                ctx.fillText('/', 0, 2);
+                ctx.restore();
+                link.href = canvas.toDataURL('image/png');
+                timeoutId = setTimeout(drawFavicon, 100);
+            }
+            document.addEventListener("visibilitychange", function() {
+                if (!document.hidden) {
+                    clearTimeout(timeoutId);
+                    drawFavicon();
+                }
+            });
+            drawFavicon();
+        })();
         document.querySelectorAll('.rack-item[data-spec]').forEach(item => {
             item.setAttribute('tabindex', '0');
             item.setAttribute('aria-label', item.getAttribute('data-spec'));
