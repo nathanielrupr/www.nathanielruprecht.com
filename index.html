@@ -3,44 +3,718 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nathaniel Ruprecht | Portfolio</title>
-    
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-    
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-
-        @keyframes spin-color {
-            0% { transform: rotate(0deg); color: #06b6d4; }   /* Cyan */
-            25% { transform: rotate(90deg); color: #a855f7; }  /* Purple */
-            50% { transform: rotate(180deg); color: #ec4899; }  /* Pink */
-            75% { transform: rotate(270deg); color: #eab308; }  /* Yellow */
-            100% { transform: rotate(360deg); color: #06b6d4; } /* Back to Cyan */
-        }
-        
-        .animate-spin-color {
-            animation: spin-color 2s linear infinite;
-            display: inline-block;
-        }
-    </style>
+    <title>Nathaniel Ruprecht | Portfolio & Homelab</title>
+    <meta name="description" content="Professional portfolio, work experience, homelab projects, and contact information for Nathaniel Ruprecht.">
+    <meta name="keywords" content="Nathaniel Ruprecht, DevOps, Homelab, Systems Engineer, Portfolio, Proxmox">
+    <meta name="author" content="Nathaniel Ruprecht">
+    <meta name="theme-color" content="#1E2328">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-family='system-ui, sans-serif' font-size='26' font-weight='900' fill='%23D95C14'>/</text></svg>">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Nathaniel Ruprecht | Portfolio & Homelab">
+    <meta property="og:description" content="Professional portfolio, work experience, homelab projects, and contact info.">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Nathaniel Ruprecht | Portfolio & Homelab">
+    <meta name="twitter:description" content="Professional portfolio, work experience, homelab projects, and contact info.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css?v=37">
 </head>
-
-<body class="bg-gray-950 text-gray-200 h-screen flex flex-col items-center justify-center p-4">
-    
-    <div class="text-center">
-        
-        <div class="animate-spin-color text-5xl font-mono mb-6 font-bold">/</div>
-
-        <h1 class="text-4xl md:text-5xl font-semibold tracking-tight mb-4">Nathaniel Ruprecht</h1>
-        <p class="text-xl text-gray-400 uppercase tracking-widest font-medium">Work in Progress</p>
-        
-        <div class="mt-10 border-t border-gray-800 pt-6">
-            <p class="text-sm text-gray-500">Homelab Projects & Resume coming soon.</p>
+<body>
+    <!-- Header Navigation -->
+    <header class="header-wrapper" id="main-header">
+        <div class="container header-container">
+            <a href="#top" class="logo" id="header-logo" aria-label="Nathaniel Ruprecht Logo">
+                <span class="logo-slash">/</span>Nathaniel<span>Ruprecht</span>
+            </a>
+            <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav id="navigation" aria-label="Primary Navigation">
+                <ul class="nav-menu" id="nav-menu">
+                    <li><a href="#experience" class="nav-link" id="nav-link-experience">Work Experience</a></li>
+                    <li><a href="#education" class="nav-link" id="nav-link-education">Education & Certs</a></li>
+                    <li><a href="#homelab" class="nav-link" id="nav-link-homelab">Homelab</a></li>
+                    <li><a href="#contact" class="nav-link" id="nav-link-contact">Contact Info</a></li>
+                </ul>
+            </nav>
         </div>
+    </header>
+    <main>
+        <!-- Hero Section -->
+        <section id="top" class="section">
+            <!-- Animated background orbs -->
+            <div class="bg-orb orb-accent" style="top: 20%; right: 10%; width: 350px; height: 350px; animation: float-orb-1 25s ease-in-out infinite;"></div>
+            <div class="bg-orb orb-teal" style="bottom: 10%; left: -5%; width: 350px; height: 350px; animation: float-orb-2 28s ease-in-out infinite;"></div>
+            <div class="bg-orb orb-accent" style="top: 60%; left: 15%; width: 220px; height: 220px; animation: float-orb-1 26s ease-in-out infinite;"></div>
+            <div class="container">
+                <div class="hero-content">
+                    <span class="hero-badge">Welcome to my site</span>
+                    <h1 class="hero-title">Nathaniel Ruprecht</h1>
+                    <p class="hero-description">
+                        Google Datacenter Technician with 9 years of IT experience spanning systems administration, desktop support, and enterprise networking. Pursuing a Bachelor's degree in Network and Cloud Engineering.
+                    </p>
+                    <div class="cta-group">
+                        <a href="#homelab" class="btn btn-primary" id="hero-cta-primary">Explore Homelab</a>
+                        <a href="#contact" class="btn btn-secondary" id="hero-cta-secondary">Get In Touch</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <hr class="section-separator">
+        <!-- Work Experience -->
+        <section id="experience" class="section">
+            <div class="bg-orb orb-accent" style="top: -10%; left: -10%; width: 400px; height: 400px; animation: float-orb-2 30s ease-in-out infinite;"></div>
+            <div class="bg-orb orb-teal" style="bottom: -10%; right: -10%; width: 400px; height: 400px; animation: float-orb-1 32s ease-in-out infinite;"></div>
+            <div class="bg-orb orb-teal" style="top: 45%; left: 5%; width: 250px; height: 250px; animation: float-orb-2 35s ease-in-out infinite reverse;"></div>
+            <div class="bg-orb orb-accent" style="top: 75%; right: 10%; width: 300px; height: 300px; animation: float-orb-1 30s ease-in-out infinite;"></div>
+            <div class="container">
+                <h2 class="section-title">Work Experience</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">Sep 2025 - Present</div>
+                        <div class="timeline-content">
+                            <details class="role-details" open>
+                                <summary class="role-summary">
+                                    <div class="role-summary-left">
+                                        <span class="timeline-company">
+                                            <span class="g-blue">G</span><span class="g-red">o</span><span class="g-yellow">o</span><span class="g-blue">g</span><span class="g-green">l</span><span class="g-red">e</span>
+                                        </span>
+                                        <h3 class="timeline-role">Datacenter Technician 2</h3>
+                                    </div>
+                                    <div class="role-toggle-btn">
+                                        <svg class="chevron-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                                    </div>
+                                </summary>
+                                <ul class="timeline-details">
+                                    <li>Lead local projects and deployments in collaboration with vendor teams to increase site capabilities.</li>
+                                    <li>Diagnose, troubleshoot, and repair failures on server platforms and network infrastructure.</li>
+                                    <li>Develop automation tools and scripts using Python and Bash to streamline operations and increase team efficiency.</li>
+                                </ul>
+                            </details>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">Dec 2024 - Apr 2025</div>
+                        <div class="timeline-content">
+                            <details class="role-details">
+                                <summary class="role-summary">
+                                    <div class="role-summary-left">
+                                        <span class="timeline-company company-dolan">Dolan <span class="dolan-auto">Auto</span> Group</span>
+                                        <h3 class="timeline-role">Junior Systems Admin</h3>
+                                    </div>
+                                    <div class="role-toggle-btn">
+                                        <svg class="chevron-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                                    </div>
+                                </summary>
+                                <ul class="timeline-details">
+                                    <li>Administer Windows servers, Hyper-V clusters, Veeam backup systems, networking equipment, SaaS tools, Azure AD, printers, and MDM solutions to maintain peak operational reliability.</li>
+                                    <li>Collaborate with the IT infrastructure team on technical projects, including printer refreshes, Active Directory audits, enterprise SaaS deployments, and new site integrations.</li>
+                                    <li>Resolve tier-2 technical escalations and manage user tickets efficiently using Jira, HappyFox, and Monday.com.</li>
+                                </ul>
+                            </details>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">Jul 2023 - Dec 2024</div>
+                        <div class="timeline-content">
+                            <details class="role-details">
+                                <summary class="role-summary">
+                                    <div class="role-summary-left">
+                                        <span class="timeline-company"><span class="company-nv">NV</span> Energy</span>
+                                        <h3 class="timeline-role">IT Enterprise Tech II</h3>
+                                    </div>
+                                    <div class="role-toggle-btn">
+                                        <svg class="chevron-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                                    </div>
+                                </summary>
+                                <ul class="timeline-details">
+                                    <li>Respond to end-users' inquiries regarding technology issues, handling incident recognition, research, isolation, and follow-up steps for first and second-tier issues.</li>
+                                    <li>Utilize Azure, Intune, Identity Manager, VMware, Citrix Director, and other enterprise systems to resolve or escalate tickets.</li>
+                                    <li>Manage Active Directory user accounts across domains, coordinating password resets and group membership.</li>
+                                </ul>
+                            </details>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">Jun 2021 - Jul 2023</div>
+                        <div class="timeline-content">
+                            <span class="timeline-company-group"><span class="company-renown">Renown</span> Health</span>
+                            <div class="timeline-promotion">
+                                <details class="role-details">
+                                    <summary class="role-summary">
+                                        <div class="role-summary-left">
+                                            <h3 class="timeline-role">Desktop Engineer <span class="timeline-contract">(Contract via R4Solutions)</span></h3>
+                                            <span class="timeline-promo-date">Jan 2023 - Jul 2023</span>
+                                        </div>
+                                        <div class="role-toggle-btn">
+                                            <svg class="chevron-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                                        </div>
+                                    </summary>
+                                    <ul class="timeline-details">
+                                        <li>Develop and deploy automation scripts using PowerShell, PsExec, and CMD to streamline desktop provisioning and program installations.</li>
+                                        <li>Implement, configure, and test new workstation hardware, operating systems, and software configurations.</li>
+                                        <li>Manage vendor system integrations for hospital-wide software deployment and custom diagnostics.</li>
+                                        <li>Diagnose, repair, and deploy critical workstation environments, resolving OS errors and swapping internal hardware components in a fast-paced clinical setting.</li>
+                                    </ul>
+                                </details>
+                            </div>
+                            <div class="timeline-promotion">
+                                <details class="role-details">
+                                    <summary class="role-summary">
+                                        <div class="role-summary-left">
+                                            <h3 class="timeline-role">Desktop System Support Specialist</h3>
+                                            <span class="timeline-promo-date">Jun 2021 - Jan 2023</span>
+                                        </div>
+                                        <div class="role-toggle-btn">
+                                            <svg class="chevron-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                                        </div>
+                                    </summary>
+                                    <ul class="timeline-details">
+                                        <li>Diagnosed and repaired client workstations, including operating system recovery, image deployments, software provisioning, and hardware swaps in a clinical hospital environment.</li>
+                                        <li>Supported major deployment initiatives, including site rollouts and Windows 10 refresh cycles.</li>
+                                        <li>Leveraged ServiceNow and WorkFront to coordinate tickets and manage infrastructure tasks across designated medical zones.</li>
+                                    </ul>
+                                </details>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">Sep 2017 - May 2021</div>
+                        <div class="timeline-content">
+                            <span class="timeline-company-group"><span class="company-geeksquad">Geek Squad</span> &amp; <span class="company-bestbuy">Best Buy</span></span>
+                            <div class="timeline-promotion">
+                                <details class="role-details">
+                                    <summary class="role-summary">
+                                        <div class="role-summary-left">
+                                            <h3 class="timeline-role">Advanced Repair Agent (ARA)</h3>
+                                            <span class="timeline-promo-date">Oct 2019 - May 2021</span>
+                                        </div>
+                                        <div class="role-toggle-btn">
+                                            <svg class="chevron-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                                        </div>
+                                    </summary>
+                                    <ul class="timeline-details">
+                                        <li>Diagnosed, repaired, and replaced operating systems, local system configurations, and faulty components on client workstations and servers.</li>
+                                        <li>Educated clients on hardware status and diagnostics, presenting tailored options for data protection, system recovery, or device replacement.</li>
+                                        <li>Earned Apple Atlas certification to perform official hardware diagnostics and repairs on iPhones, MacBooks, and iPads.</li>
+                                    </ul>
+                                </details>
+                            </div>
+                            <div class="timeline-promotion">
+                                <details class="role-details">
+                                    <summary class="role-summary">
+                                        <div class="role-summary-left">
+                                            <h3 class="timeline-role">Counter Agent (CA)</h3>
+                                            <span class="timeline-promo-date">Feb 2018 - Oct 2019</span>
+                                        </div>
+                                        <div class="role-toggle-btn">
+                                            <svg class="chevron-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                                        </div>
+                                    </summary>
+                                    <ul class="timeline-details">
+                                        <li>Troubleshot local software configuration and hardware issues on a 20-minute client consultation cycle.</li>
+                                        <li>Executed PXIe system imaging and hardware diagnostics suite on returned devices to certify open-box hardware compliance.</li>
+                                        <li>Provisioned new client devices, installing applications, removing bloatware, and applying critical OS patches.</li>
+                                    </ul>
+                                </details>
+                            </div>
+                            <div class="timeline-promotion">
+                                <details class="role-details">
+                                    <summary class="role-summary">
+                                        <div class="role-summary-left">
+                                            <h3 class="timeline-role">Computer Sales Associate</h3>
+                                            <span class="timeline-promo-date">Sep 2017 - Feb 2018</span>
+                                        </div>
+                                        <div class="role-toggle-btn">
+                                            <svg class="chevron-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                                        </div>
+                                    </summary>
+                                    <ul class="timeline-details">
+                                        <li>Consulted with customers to recommend software, hardware, and accessories tailored to their technical requirements.</li>
+                                        <li>Maintained an up-to-date, comprehensive knowledge base on current processors, storage technologies, graphics architectures, and software licenses.</li>
+                                        <li>Consistently met monthly sales targets, service attach rates, and customer feedback metrics.</li>
+                                    </ul>
+                                </details>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <hr class="section-separator">
+        <!-- Education -->
+        <section id="education" class="section">
+            <div class="bg-orb orb-accent" style="top: 40%; left: 45%; width: 350px; height: 350px; animation: float-orb-1 28s ease-in-out infinite reverse;"></div>
+            <div class="bg-orb orb-teal" style="bottom: 10%; right: 5%; width: 260px; height: 260px; animation: float-orb-2 34s ease-in-out infinite;"></div>
+            <div class="container">
+                <h2 class="section-title">Education & Certifications</h2>
+                <div class="education-layout">
+                    <div class="certifications-grid">
+                        <div class="cert-card">
+                            <div class="cert-icon" aria-hidden="true">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg>
+                            </div>
+                            <div class="cert-info">
+                                <h4 class="cert-title">Linux Essentials</h4>
+                                <p class="cert-issuer">Linux Professional Institute</p>
+                                <div class="education-date-badge cert-badge">Issued Mar 2026</div>
+                            </div>
+                        </div>
+                        <div class="cert-card">
+                            <div class="cert-icon" aria-hidden="true">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                            </div>
+                            <div class="cert-info">
+                                <h4 class="cert-title">CompTIA Security+</h4>
+                                <p class="cert-issuer">CompTIA</p>
+                                <div class="education-date-badge cert-badge">Issued Jan 2026 &bull; Expires Jan 2029</div>
+                            </div>
+                        </div>
+                        <div class="cert-card">
+                            <div class="cert-icon" aria-hidden="true">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="16" y="16" width="6" height="6" rx="1"></rect><rect x="2" y="16" width="6" height="6" rx="1"></rect><rect x="9" y="2" width="6" height="6" rx="1"></rect><path d="M5 16v-3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3M12 12V8"></path></svg>
+                            </div>
+                            <div class="cert-info">
+                                <h4 class="cert-title">CompTIA Network+</h4>
+                                <p class="cert-issuer">CompTIA</p>
+                                <div class="education-date-badge cert-badge">Issued Dec 2025 &bull; Expires Jan 2029</div>
+                            </div>
+                        </div>
+                        <div class="cert-card">
+                            <div class="cert-icon" aria-hidden="true">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                            </div>
+                            <div class="cert-info">
+                                <h4 class="cert-title">CompTIA A+</h4>
+                                <p class="cert-issuer">CompTIA</p>
+                                <div class="education-date-badge cert-badge">Issued Sep 2025 &bull; Expires Jan 2029</div>
+                            </div>
+                        </div>
+                        <div class="cert-card">
+                            <div class="cert-icon" aria-hidden="true">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 16v-4"></path><path d="M12 8h.01"></path></svg>
+                            </div>
+                            <div class="cert-info">
+                                <h4 class="cert-title">CC - Cybersecurity</h4>
+                                <p class="cert-issuer">ISC2</p>
+                                <div class="education-date-badge cert-badge">Issued Jan 2023 &bull; Expired Jan 2026</div>
+                            </div>
+                        </div>
+                        <div class="cert-card">
+                            <div class="cert-icon" aria-hidden="true">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20.94c1.5 0 2.75 1.06 4 1.06 3 0 6-8 6-12.22A4.91 4.91 0 0 0 17 5c-2.22 0-4 1.44-5 2-1-.56-2.78-2-5-2a4.9 4.9 0 0 0-5 4.78C2 14 5 22 8 22c1.25 0 2.5-1.06 4-1.06Z"></path><path d="M10 2c1 .5 2 2 2 5h-2c0-3-1-4-2-5Z"></path></svg>
+                            </div>
+                            <div class="cert-info">
+                                <h4 class="cert-title">Certified iOS Technician</h4>
+                                <p class="cert-issuer">Apple</p>
+                                <div class="education-date-badge cert-badge">Issued Jan 2019</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="education-card">
+                        <div class="education-header">
+                            <div class="education-icon" aria-hidden="true">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5"></path></svg>
+                            </div>
+                            <div>
+                                <h3 class="credential-title">BA in Network and Cloud Engineering</h3>
+                                <span class="credential-subtitle">Western Governors University</span>
+                            </div>
+                        </div>
+                        <div class="education-date-badge">Started July 2025 &bull; In Progress</div>
+                        <ul class="timeline-details" style="margin-top: 1.5rem;">
+                            <li>Focusing on enterprise systems architecture, software-defined networks, and cloud virtualization deployments.</li>
+                            <li>Acquiring operational competency across multi-cloud infrastructure automation, scripting, and configuration standards.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <hr class="section-separator">
+        <!-- Homelab Portfolio -->
+        <section id="homelab" class="section">
+            <div class="bg-orb orb-teal" style="top: -10%; right: -15%; width: 450px; height: 450px; animation: float-orb-1 27s ease-in-out infinite;"></div>
+            <div class="bg-orb orb-accent" style="bottom: -15%; left: -10%; width: 400px; height: 400px; animation: float-orb-2 29s ease-in-out infinite;"></div>
+            <div class="bg-orb orb-teal" style="top: 30%; right: 40%; width: 380px; height: 380px; animation: float-orb-2 38s ease-in-out infinite;"></div>
+            <div class="bg-orb orb-accent" style="top: 60%; left: 20%; width: 280px; height: 280px; animation: float-orb-1 33s ease-in-out infinite reverse;"></div>
+            <div class="bg-orb orb-teal" style="top: 80%; left: 45%; width: 200px; height: 200px; animation: float-orb-2 29s ease-in-out infinite;"></div>
+            <div class="container">
+                <h2 class="section-title">Homelab</h2>
+                <div class="homelab-layout">
+                    <div class="hardware-container" id="homelab-hardware">
+                        <div class="rack-diagram">
+                            <!-- CSS Grid Server Rack Diagram -->
+                        <div class="server-rack">
+                                <div class="rack-ruler">
+                                    <div class="ruler-u">25</div><div class="ruler-u">24</div><div class="ruler-u">23</div>
+                                    <div class="ruler-u">22</div><div class="ruler-u">21</div><div class="ruler-u">20</div>
+                                    <div class="ruler-u">19</div><div class="ruler-u">18</div><div class="ruler-u">17</div>
+                                    <div class="ruler-u">16</div><div class="ruler-u">15</div><div class="ruler-u">14</div>
+                                    <div class="ruler-u">13</div><div class="ruler-u">12</div><div class="ruler-u">11</div>
+                                    <div class="ruler-u">10</div><div class="ruler-u">9</div><div class="ruler-u">8</div>
+                                    <div class="ruler-u">7</div><div class="ruler-u">6</div><div class="ruler-u">5</div>
+                                    <div class="ruler-u">4</div><div class="ruler-u">3</div><div class="ruler-u">2</div>
+                                    <div class="ruler-u">1</div>
+                                </div>
+                                <div class="rack-item rack-patch u-1" data-spec="24-Port Keystone Patch Panel">Patch Panel</div>
+                                <div class="rack-item rack-patch u-1" data-spec="24-Port Keystone Patch Panel">Patch Panel</div>
+                                <div class="rack-item rack-ubiquiti u-1" data-spec="Ubiquiti UniFi 48-Port 500W PoE Gigabit Switch">Ubiquiti 48-Port Switch</div>
+                                <div class="rack-item rack-switch u-1" data-spec="TP-Link 8-Port 10G Switch">10Gb TP-Link Switch</div>
+                                <div class="rack-item rack-kvm u-1" data-spec="eKL 8-Port HDMI KVM Switch with USB">8-Port HDMI KVM</div>
+                                <div class="rack-item rack-console u-1" data-spec="1U Rackmount LCD Console and Keyboard Drawer">Monitor &amp; Keyboard Mount</div>
+                                <div class="rack-item rack-blank u-5"></div>
+                                <div class="rack-item rack-dell u-2" data-spec="Dell R740xd: Dual Xeon Gold 6246, 96GB RAM, GTX 1080">Dell PowerEdge R740xd</div>
+                                <div class="rack-item rack-storage u-2" data-spec="Dell PowerVault MD1200 DAS: Empty">Dell PowerVault MD1200</div>
+                                <div class="rack-item rack-dell u-2" data-spec="Dell R740: Dual Xeon Gold 6140, 128GB RAM, Intel Arc A310">Dell PowerEdge R740</div>
+                                <div class="rack-item rack-storage u-2" data-spec="Dell PowerVault MD1200 DAS: 9x 4TB & 3x 8TB HDDs (60TB Total)">Dell PowerVault MD1200</div>
+                                <div class="rack-item rack-storage u-2" data-spec="Dell PowerVault MD1200 DAS: 11x 8TB HDDs (88TB Total)">Dell PowerVault MD1200</div>
+                                <div class="rack-item rack-ups u-2" data-spec="Liebert GXT3-1500RT120 (1500VA/1350W)">Liebert 1500VA UPS</div>
+                                <div class="rack-item rack-ups u-2" data-spec="Liebert GXT3-1500RT120 (1500VA/1350W)">Liebert 1500VA UPS</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="homelab-grid">
+                    <article class="project-card" id="project-proxmox">
+                        <div class="project-icon" aria-hidden="true">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect><rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line></svg>
+                        </div>
+                        <h3 class="project-title">Proxmox</h3>
+                        <p class="project-desc">Architected a virtualization system to control my homelab on dual Dell R740s with Proxmox backup server to handle transferring VMs and containers.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Proxmox VE</span>
+                            <span class="project-tag">LXC</span>
+                            <span class="project-tag">Virtualization</span>
+                            <span class="project-tag">Hypervisor</span>
+                        </div>
+                    </article>
+                    <article class="project-card" id="project-openobserve">
+                        <div class="project-icon" aria-hidden="true">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                        </div>
+                        <h3 class="project-title">OpenObserve</h3>
+                        <p class="project-desc">Deployed OpenObserve to collect and analyze logs from my homelab systems, utilizing its AI and alerting capabilities.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">OpenObserve</span>
+                            <span class="project-tag">Observability</span>
+                            <span class="project-tag">Log Search</span>
+                            <span class="project-tag">Telemetry</span>
+                        </div>
+                    </article>
+                    <article class="project-card" id="project-guacamole">
+                        <div class="project-icon" aria-hidden="true">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                        </div>
+                        <h3 class="project-title">Apache Guacamole</h3>
+                        <p class="project-desc">Configured Apache Guacamole to provide clientless remote desktop access to my homelab systems, utilizing its browser-based gateway for secure connections.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Apache Guacamole</span>
+                            <span class="project-tag">Remote Desktop</span>
+                            <span class="project-tag">SSH/RDP</span>
+                            <span class="project-tag">Gateway</span>
+                        </div>
+                    </article>
+                    <article class="project-card" id="project-caddy">
+                        <div class="project-icon" aria-hidden="true">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                        </div>
+                        <h3 class="project-title">Caddy</h3>
+                        <p class="project-desc">Deployed Caddy as a reverse proxy to securely expose homelab services to the internet, utilizing its automatic HTTPS capabilities to manage SSL certificates seamlessly.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Caddy</span>
+                            <span class="project-tag">Reverse Proxy</span>
+                            <span class="project-tag">Web Server</span>
+                            <span class="project-tag">SSL/TLS</span>
+                        </div>
+                    </article>
+                    <article class="project-card" id="project-amp">
+                        <div class="project-icon" aria-hidden="true">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path></svg>
+                        </div>
+                        <h3 class="project-title">CubeCoders AMP</h3>
+                        <p class="project-desc">Deployed CubeCoders AMP to manage and host dedicated game servers, utilizing its centralized web interface to automate game server provisioning, backups, and resource allocation on dual R740s.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">CubeCoders AMP</span>
+                            <span class="project-tag">Game Servers</span>
+                            <span class="project-tag">Server Management</span>
+                            <span class="project-tag">Automation</span>
+                        </div>
+                    </article>
+                    <article class="project-card" id="project-nut">
+                        <div class="project-icon" aria-hidden="true">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path></svg>
+                        </div>
+                        <h3 class="project-title">Network UPS Tools (NUT)</h3>
+                        <p class="project-desc">Configured Network UPS Tools (NUT) to monitor uninterruptible power supplies across the homelab, automating safe shutdowns for servers and storage arrays during power events.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">NUT</span>
+                            <span class="project-tag">UPS</span>
+                            <span class="project-tag">Power Management</span>
+                            <span class="project-tag">Automation</span>
+                        </div>
+                    </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <hr class="section-separator">
+        <!-- Contact Form -->
+        <section id="contact" class="section">
+            <div class="bg-orb orb-accent" style="top: 15%; right: -10%; width: 400px; height: 400px; animation: float-orb-2 26s ease-in-out infinite;"></div>
+            <div class="bg-orb orb-teal" style="bottom: -10%; left: -15%; width: 450px; height: 450px; animation: float-orb-1 31s ease-in-out infinite;"></div>
+            <div class="bg-orb orb-teal" style="top: 50%; left: 40%; width: 250px; height: 250px; animation: float-orb-2 25s ease-in-out infinite;"></div>
+            <div class="bg-orb orb-accent" style="bottom: 25%; right: 15%; width: 290px; height: 290px; animation: float-orb-1 32s ease-in-out infinite reverse;"></div>
+            <div class="container">
+                <h2 class="section-title">Contact Information</h2>
+                <div class="contact-layout">
+                    <div class="contact-info">
+                        <h3 class="contact-lead">Let's connect!</h3>
+                        <p class="contact-text">Feel free to contact me.</p>
+                        <div class="contact-methods">
+                            <div class="contact-item">
+                                <div class="contact-icon" aria-hidden="true">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                                </div>
+                                <div class="contact-details">
+                                    <h4>Email</h4>
+                                    <p><a href="mailto:ping@nathanielruprecht.com" id="contact-email">ping@nathanielruprecht.com</a></p>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <div class="contact-icon" aria-hidden="true">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                                </div>
+                                <div class="contact-details">
+                                    <h4>LinkedIn</h4>
+                                    <p><a href="https://www.linkedin.com/in/nathanielruprecht/" target="_blank" rel="noopener" id="contact-linkedin">linkedin.com/in/nathanielruprecht</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <form class="contact-form" id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+                        <input type="hidden" name="access_key" value="640379db-8652-406f-987c-d8b22bb3897c">
+                        <div class="terminal-header">
+                            <div class="terminal-buttons">
+                                <span class="terminal-btn close"></span>
+                                <span class="terminal-btn minimize"></span>
+                                <span class="terminal-btn expand"></span>
+                            </div>
+                            <div class="terminal-title">contact_session.sh</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="form-name" class="form-label">Name</label>
+                            <input type="text" name="name" id="form-name" class="form-control" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="form-email" class="form-label">Email Address</label>
+                            <input type="email" name="email" id="form-email" class="form-control" placeholder="your.email@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="form-message" class="form-label">Message</label>
+                            <textarea name="message" id="form-message" class="form-control" placeholder="Your message here..." required></textarea>
+                        </div>
+                        <!-- Hidden honeypot to catch spam bots -->
+                        <input type="checkbox" name="botcheck" class="visually-hidden" tabindex="-1" aria-hidden="true">
+                        <button type="submit" class="btn btn-primary" style="width: 100%;" id="form-submit-btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <hr class="section-separator">
+    </main>
+    <!-- Footer -->
+    <footer id="bottom">
+        <div class="container footer-content">
+            <div class="footer-logo">
+                <span class="logo-slash">/</span>Nathaniel<span>Ruprecht</span>
+            </div>
+            <nav aria-label="Footer Navigation">
+                <ul class="footer-nav">
+                    <li><a href="#experience" class="footer-nav-link" id="footer-link-experience">Work Experience</a></li>
+                    <li><a href="#education" class="footer-nav-link" id="footer-link-education">Education & Certs</a></li>
+                    <li><a href="#homelab" class="footer-nav-link" id="footer-link-homelab">Homelab</a></li>
+                    <li><a href="#contact" class="footer-nav-link" id="footer-link-contact">Contact Info</a></li>
+                </ul>
+            </nav>
+            <div class="footer-socials">
+                <a href="https://www.linkedin.com/in/nathanielruprecht/" target="_blank" rel="noopener" class="social-icon-btn" aria-label="LinkedIn Profile" id="footer-social-linkedin">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                </a>
+                <a href="mailto:ping@nathanielruprecht.com" class="social-icon-btn" aria-label="Email Nathaniel" id="footer-social-email">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                </a>
+            </div>
+            <p class="footer-copyright" id="footer-copyright-text">
+                &copy; 2026 Nathaniel Ruprecht. All rights reserved.
+            </p>
+        </div>
+    </footer>
+    <div class="scroll-widget" id="scroll-widget" aria-label="Page navigation shortcuts">
+        <a href="#top" class="scroll-widget-half scroll-widget-top" id="scroll-widget-top-btn" aria-label="Scroll to Top">
+            <span class="scroll-widget-label">Top</span>
+            <svg class="scroll-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>
+        </a>
+        <a href="#bottom" class="scroll-widget-half scroll-widget-bottom" id="scroll-widget-bottom-btn" aria-label="Scroll to Bottom">
+            <svg class="scroll-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            <span class="scroll-widget-label">Bottom</span>
+        </a>
     </div>
-
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const header = document.getElementById('main-header');
+            const scrollThreshold = 30;
+            function checkScroll() {
+                if (window.scrollY > scrollThreshold) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+            }
+            window.addEventListener('scroll', checkScroll, { passive: true });
+            checkScroll(); 
+            const menuToggle = document.getElementById('menu-toggle');
+            const navMenu = document.getElementById('nav-menu');
+            const navLinks = document.querySelectorAll('.nav-link');
+            menuToggle.addEventListener('click', () => {
+                const isOpen = navMenu.classList.toggle('open');
+                menuToggle.classList.toggle('open');
+                menuToggle.setAttribute('aria-expanded', isOpen);
+            });
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    navMenu.classList.remove('open');
+                    menuToggle.classList.remove('open');
+                    menuToggle.setAttribute('aria-expanded', 'false');
+                });
+            });
+            const sections = document.querySelectorAll('section, footer');
+            const navLinksMap = {};
+            navLinks.forEach(link => {
+                const targetId = link.getAttribute('href').substring(1);
+                navLinksMap[targetId] = link;
+            });
+            const observerOptions = {
+                root: null,
+                rootMargin: '-30% 0px -30% 0px',
+                threshold: 0
+            };
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const id = entry.target.getAttribute('id');
+                        navLinks.forEach(link => link.classList.remove('active'));
+                        if (navLinksMap[id]) {
+                            navLinksMap[id].classList.add('active');
+                        }
+                    }
+                });
+            }, observerOptions);
+            sections.forEach(section => observer.observe(section));
+            const contactForm = document.getElementById('contact-form');
+            if (contactForm) {
+                contactForm.addEventListener('submit', async (e) => {
+                    e.preventDefault(); 
+                    const submitBtn = document.getElementById('form-submit-btn');
+                    if (submitBtn) {
+                        submitBtn.textContent = 'Sending...';
+                        submitBtn.disabled = true;
+                    }
+                    const formData = new FormData(contactForm);
+                    try {
+                        const response = await fetch(contactForm.action, {
+                            method: 'POST',
+                            body: formData,
+                            headers: {
+                                'Accept': 'application/json'
+                            }
+                        });
+                        if (response.ok) {
+                            if (submitBtn) {
+                                submitBtn.textContent = 'Message Sent!';
+                                submitBtn.style.backgroundColor = '#2e7d32'; 
+                            }
+                            contactForm.reset();
+                        } else {
+                            if (submitBtn) {
+                                submitBtn.textContent = 'Error Sending';
+                                submitBtn.style.backgroundColor = '#d32f2f'; 
+                            }
+                        }
+                    } catch (error) {
+                        if (submitBtn) {
+                            submitBtn.textContent = 'Error Sending';
+                            submitBtn.style.backgroundColor = '#d32f2f';
+                        }
+                    }
+                    setTimeout(() => {
+                        if (submitBtn) {
+                            submitBtn.textContent = 'Send Message';
+                            submitBtn.style.backgroundColor = '';
+                            submitBtn.disabled = false;
+                        }
+                    }, 3000);
+                });
+            }
+            const typingFields = [
+                { id: 'form-name', prefix: '> ', phrases: ['Nathaniel Ruprecht', 'Linus Torvalds', 'root', '404_Name_Not_Found', 'Sudo Admin'] },
+                { id: 'form-email', prefix: '> ', phrases: ['root@localhost', 'linus@kernel.org', 'bobby@xkcd.com', 'dev-null@blackhole.net', 'sudo-make-me-a-sandwich@xkcd.com', '127.0.0.1@localhost'] },
+                { id: 'form-message', prefix: '> ', phrases: [
+                    'sudo rm -rf / --no-preserve-root',
+                    'dd if=/dev/zero of=/dev/sda',
+                    ':(){ :|:& };:'
+                ] }
+            ];
+            function startPlaceholderTyping() {
+                typingFields.forEach(field => {
+                    const input = document.getElementById(field.id);
+                    if (!input) return;
+                    let phraseIndex = 0;
+                    let charIndex = 0;
+                    let isDeleting = false;
+                    let delay = 100;
+                    function type() {
+                        if (document.hidden || document.activeElement === input || input.value.length > 0) {
+                            setTimeout(type, 1000);
+                            return;
+                        }
+                        const currentPhrase = field.phrases[phraseIndex];
+                        if (isDeleting) {
+                            input.placeholder = field.prefix + currentPhrase.substring(0, charIndex - 1) + '█';
+                            charIndex--;
+                            delay = 50;
+                        } else {
+                            input.placeholder = field.prefix + currentPhrase.substring(0, charIndex + 1) + '█';
+                            charIndex++;
+                            delay = 100;
+                        }
+                        if (!isDeleting && charIndex === currentPhrase.length) {
+                            input.placeholder = field.prefix + currentPhrase + ' ';
+                            delay = 2000;
+                            isDeleting = true;
+                        } else if (isDeleting && charIndex === 0) {
+                            isDeleting = false;
+                            phraseIndex = (phraseIndex + 1) % field.phrases.length;
+                            delay = 500;
+                        }
+                        setTimeout(type, delay);
+                    }
+                    type();
+                });
+            }
+            startPlaceholderTyping();
+        });
+        document.querySelectorAll('.rack-item[data-spec]').forEach(item => {
+            item.setAttribute('tabindex', '0');
+            item.setAttribute('aria-label', item.getAttribute('data-spec'));
+        });
+    </script>
 </body>
 </html>
